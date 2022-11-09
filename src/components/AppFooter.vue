@@ -4,7 +4,133 @@
         name: "AppFooter",
         data (){
             return{
-                comicsLinks: [
+                comics: [
+
+                    {
+                        title: "Characters",
+                        href:"/characters",
+                        active: false,
+                    },
+                    {
+                        title: "Comics",
+                        href: "/comics",
+                        active: true,
+                    },
+                    {
+                        title: "Movies",
+                        href: "/movies",
+                        active: false,
+                    },
+                    {
+                        title: "Tv",
+                        href: "/tv",
+                        active: false,
+                    },
+                    {
+                        title: "Games",
+                        href: "/games",
+                        active: false,
+                    },
+                    {
+                        title: "Collectibles",
+                        href: "/collectibles",
+                        active: false,
+                    },
+                    {
+                        title: "Videos",
+                        href: "/videos",
+                        active: false,
+                    },
+                    {
+                        title: "Fans",
+                        href: "/fans",
+                        active: false,
+                    },
+                    {
+                        title: "News",
+                        href: "/news",
+                        active: false,
+                    }
+                ],
+
+                shop: [
+                    {
+                        title: "Shop DC",
+                        href:""
+                    },
+                    {
+                        title: "Shop DC Collectibles",
+                        href:""
+                    }
+                ],
+
+                dc:[
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    }
+                ],
+                sites: [
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
+                    {
+                        title: "",
+                        href:""
+                    },
 
                 ]
             }
@@ -18,31 +144,24 @@
             <div class="col">
                 <h3>DC Comics</h3>
                 <ul>   
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
-                    <li>link</li>
+                    <li v-for="(link, index) in comics" :key="index">{{link.title}}</li>
                 </ul>
                 <h3>Shop</h3>
                 <ul>
-                    <li>link</li>
-                    <li>link</li>
+                    <li v-for="(link, index) in shop" :key="index">{{link.title}}</li>
                 </ul>
             </div>
         
             <div class="col">
                 <h3>DC</h3>
                 <ul>
-                    <li>link</li>
-                    <li>link</li>
+                    <li v-for="(link, index) in shop" :key="index">{{link.title}}</li>
                 </ul>
             </div>
             <div class="col">
                 <h3>Sites</h3>
                 <ul>
-                    <li>link</li>
-                    <li>link</li>
+                    <li v-for="(link, index) in shop" :key="index">{{link.title}}</li>
                 </ul>
             </div>
         </div>
@@ -88,7 +207,7 @@
 .footer-top{
     background-image: url(../assets/img/footer-bg.jpg);
     width: 100%;
-    height: 400px;
+    height: 500px;
     display: flex;
     .row{
         width: 40%;
@@ -101,15 +220,17 @@
 
         h3{
             color: white;
-            padding-top: 0.8rem;
             text-transform: uppercase;
+            font-size: 1rem;
+            padding: 0.8rem 0;
         }
 
         li{
             line-height: 2rem;
             color: grey;
             margin: 0;
-            padding-top: 0.5rem;
+        
+            font-size: 0.8rem;
         }
     }  
     .dc-logo{
