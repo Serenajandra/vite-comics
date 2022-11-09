@@ -12,7 +12,7 @@ export default{
             {
                 title: "comics",
                 href: "/comics",
-                active: false,
+                active: true,
             },
             {
                 title: "movies",

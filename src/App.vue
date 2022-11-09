@@ -3,7 +3,8 @@ import AppHeader from "./components/AppHeader.vue";
 import AppSectionBlack from "./components/AppSectionBlack.vue";
 import AppFooter from './components/AppFooter.vue';
 import AppBlueNav from "./components/AppBlueNav.vue";
-  export default{
+
+export default{
     components: {
     AppHeader,
     AppSectionBlack,
