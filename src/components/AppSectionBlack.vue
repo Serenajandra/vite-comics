@@ -96,8 +96,14 @@ export default{
 <template>
 <section>
     <div class="container">
+        <div class="title">
+            <h3>current series</h3> 
+        </div>
         <div class="row">
             <AppComicCard v-for="(card, index) in comicsList" :key="index" :series="card.series" :thumb="card.thumb" />
+        </div>
+        <div class="btn">
+            <button>load more</button>
         </div>
 
     </div>
@@ -106,17 +112,41 @@ export default{
 
 <style lang="scss" scoped>
 @use "../styles/partials/mixins.scss" as *;
+@use "../styles/partials/variabiles" as *;
 .container{
     background-color: black;
     width: 100%;
-    min-height: 200px;
+    min-height: 400px;
+    position: relative;
+
+    h3{
+        color: white;
+        background-color: lighten($primary-color, 15%);
+        width: 12rem;
+        padding: .5rem;
+        text-transform: uppercase;
+        position: absolute;
+        left: 120px;
+        bottom: 600px;
+    }
     .row{
         @include flex-center ("horizontal");
         flex-wrap: wrap;
         width: 80%;
         margin: 0 auto;
-        padding: 2rem 0;
+        padding-top: 2rem;
         gap: 0 0.5rem;
+    }
+    .btn{
+        margin: 0 auto;
+        text-align: center;
+        button{
+            background-color: lighten($primary-color, 15%);
+            color: white;
+            padding: 0.5rem 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase; 
+        }
     }
 }
 </style>

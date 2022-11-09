@@ -15,9 +15,9 @@ export default{
 
 <template>
 
-    <div class="col card">
+    <div class="card">
         <img :src="thumb" :alt="series">
-        <p>{{series}}</p>
+        <p>{{series.toUpperCase()}}</p>
     </div>
 
 </template>
@@ -27,15 +27,18 @@ export default{
     .card{
         width: calc(100% / 6 - 0.5rem - 1rem);
         margin: 0 0.5rem;  
+        padding: 1.5rem 0;
 
         img{
             object-fit: cover;
             width: 100%;
-            height: 50%;
+            height: 12rem;
         }
 
         p{
             color: white;
+            font-size: 0.6rem;
+            padding-top: 0.3rem;
         }
     }
 
